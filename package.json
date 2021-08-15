@@ -1,0 +1,36 @@
+{
+  "name": "fastify-bcrypt-plugin",
+  "version": "1.0.0",
+  "description": "A Bcrypt hash generator & checker for Fastify",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Eren BALCI",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UrduX/fastify-bcrypt-plugin"
+  },
+  "keywords": [
+    "fastify-bcrypt",
+    "fastify-bcrypt-plugin",
+    "fastify",
+    "bcrypt"
+  ],
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/node": "^16.6.1",
+    "fastify": "^3.20.2",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "fastify-plugin": "^3.0.0"
+  }
+}

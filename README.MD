@@ -30,12 +30,6 @@ import Fastify, { FastifyInstance } from "fastify";
 const fastify: FastifyInstance = Fastify();
 ```
 
-Register plugin
-
-```js
-fastify.register(fastifyBcrypt);
-```
-
 If you want to change the salt work factor
 
 ```js

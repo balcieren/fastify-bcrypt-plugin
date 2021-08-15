@@ -47,8 +47,11 @@ Use with fastify decorate
 ```js
 fastify.get("/", async (request, reply) => {
   const hashedPassword = await fastify.bcrypt.hash(request.body.password);
-  const isPasswordCompared = awat fastify.bcrypt.compare(request.body.password,123);
-  return { hashedPassword,isPasswordCompared };
+  const isPasswordCompared = await fastify.bcrypt.compare(
+    request.body.password,
+    123
+  );
+  return { hashedPassword, isPasswordCompared };
 });
 ```
 

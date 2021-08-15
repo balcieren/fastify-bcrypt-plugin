@@ -43,7 +43,7 @@ fastify.get("/", async (request, reply) => {
   const hashedPassword = await fastify.bcrypt.hash(request.body.password);
   const isPasswordCompared = await fastify.bcrypt.compare(
     request.body.password,
-    123
+    hashedPassword
   );
   return { hashedPassword, isPasswordCompared };
 });
@@ -56,7 +56,7 @@ fastify.get("/", async (request, reply) => {
   const hashedPassword = await request.bcrypt.hash(request.body.password);
   const isPasswordCompared = await request.bcrypt.compare(
     request.body.password,
-    "123"
+    hashedPassword
   );
   return { hashedPassword, isPasswordCompared };
 });
